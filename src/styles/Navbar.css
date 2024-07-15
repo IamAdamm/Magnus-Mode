@@ -1,0 +1,86 @@
+.navbar {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    background-color: rgb(38, 38, 38);
+    color: white;
+    top: 0;
+    z-index: 1000;
+}
+.navbar .leftSide .logo{
+    width: 140px;
+    margin-left: 100px;
+    cursor: pointer;
+}
+.navbar .leftSide h3{
+    cursor: pointer;
+}
+.navbar .rightSide {
+    display: flex;
+    align-items: center;
+}
+.navbar .rightSide a {
+    font-size: 23px;
+    margin: 30px;
+    margin-right: 50px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+.navbar .rightSide a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: all .5s;
+}
+.navbar .rightSide a:hover::before {
+    width: 100%;
+}
+.navbar .rightSide .link {
+    font-size: 23px;
+    margin: 30px;
+    margin-right: 50px;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    color: white;
+}
+.navbar .rightSide .link::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: all .5s;
+}
+.navbar .rightSide .link:hover::before {
+    width: 100%;
+}
+.navbar .cartIcon {
+    margin-right: 50px;
+    font-size: 40px;
+    cursor: pointer;
+    position: relative;
+}
+.navbar span {
+    background-color: red;
+    padding: 5px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    position: absolute;
+    left: 95%;
+    top: 50%;
+    cursor: default;
+}

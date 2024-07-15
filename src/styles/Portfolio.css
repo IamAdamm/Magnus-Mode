@@ -1,0 +1,86 @@
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(237, 237, 237);;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+.portfolio h5 {
+    font-weight: bolder;
+    color: grey;
+}
+.portfolio h2 {
+    font-weight: bolder;
+    margin-top: -20px;
+    font-size: 30px;
+    margin-bottom: 120px;
+}
+.portfolio img {
+    width: 500px;
+    border-radius: 10%;
+    border: 3px solid black;
+}
+
+.portfolio .projectBox {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 800px;
+    margin-bottom: 50px;
+    opacity: 0%;
+}
+.portfolio .projectBoxReverse {
+    flex-direction: row-reverse;
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    margin-bottom: 50px;
+    align-items: center;
+    opacity: 0%;
+}
+
+.portfolio .projectText {
+    flex-direction: column;
+    text-align: center;
+    width: 340px;
+}
+.portfolio .projectText p {
+    color: grey;
+}
+.portfolio .projectText h3 {
+    font-size: 20px;
+}
+.portfolioPhaseInFromRight {
+    opacity: 100% !important;
+    animation: PhaseInFromRight .5s;
+    transition: all .5s;
+}
+.portfolioTitle.portfolioPhaseInFromRight h5 {
+    opacity: 100% !important;
+    animation: PhaseInFromRight 1.3s;
+    transition: all .5s;
+}
+.portfolioPhaseInFromLeft {
+    opacity: 100% !important;
+    animation: PhaseInFromLeft .5s;
+    transition: all .5s;
+}
+@keyframes PhaseInFromRight {
+    0% {
+        transform: translateX(500px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+@keyframes PhaseInFromLeft {
+    0% {
+        transform: translateX(-500px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}

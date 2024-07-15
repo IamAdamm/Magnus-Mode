@@ -1,0 +1,47 @@
+.about {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100dvh;
+    color: white;
+    background-color: rgb(38, 38, 38);
+}
+.about p {
+    color: rgb(228, 228, 228);
+}
+.aboutContainer {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 820px;
+}
+.about h1 {
+    margin-bottom: 45px;
+}
+.about h3 {
+    font-weight: bolder;
+    margin-top: -15px;
+}
+.about p {
+    font-size: 16px;
+    margin-top: -5px;
+}
+.aboutImage {
+    margin-top: 10px;
+    width: 400px;
+    border-radius: 10%;
+    display: 'flex';
+    align-items: center; 
+    justify-Content: center; 
+    height: "400px";
+    background-size:'cover';
+}
+.aboutText {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
