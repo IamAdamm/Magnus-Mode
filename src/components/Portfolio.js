@@ -20,8 +20,13 @@ function Portfolio() {
             <div className='projectText'>
                 <h3>Hand Made</h3>
                 <p>
-                    TEXTEXTEXTTEXTEXTEXT<br/>TEXTEXTEXTTEXTEXTEXT
-                </p>
+                    A Weight Tracker App that allows 
+                    users to set their goal weight and 
+                    monitor their progress accurately. 
+                    It accounts for daily weight 
+                    fluctuations and provides valuable 
+                    insights, including daily 
+                    maintenance calorie recommendations.                </p>
             </div>
         </div>
         <div className='projectBoxReverse'>

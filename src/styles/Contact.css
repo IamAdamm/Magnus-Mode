@@ -1,24 +1,27 @@
 .contact {
-    margin-top: 200px;
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 100dvh;
+    width: 100%;
 }
 .contact .contactForm {
     display: flex;
     flex-direction: column;
-    background-color: rgb(38, 38, 38);
+    background-color: rgb(237, 237, 237);
     text-align: center;
-    color: white;
+    color: black;
     border-radius: 10%;
     height: 550px;
     width: 550px;
-    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0px 20px rgb(237, 237, 237, 0.2);
+    font-weight: 700;
 }
 .contact .contactForm .contactFormTitle {
-    text-align: center;
-    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
 }
 .contact .contactForm .contactFormInput {
     margin-top: 40px;
@@ -26,18 +29,21 @@
     flex-direction: column;
     align-items: center;
 }
+.contactFormInputFullName {
+    margin-top: -10px;
+}
 .contact .contactForm .contactFormInput .field {
     width: 310px;
     height: 30px;
-    border: 2px solid white;
+    border: 1px solid black;
     border-radius: 6px;
     outline: none;
     font-size: 16px;
     margin-top: 8px;
 }
 .contact .contactForm .contactFormInput .field-Mess{
-    border: 2px solid white;
-    border-radius: 6px;
+    border: 1px solid black;
+    border-radius: 10px;
     outline: none;
     font-size: 16px;
     margin-top: 8px;
@@ -47,12 +53,42 @@
 }
 .contact .contactForm button {
     height: 50px;
-    border-radius: 6px;
+    border-radius: 10px;
     border: none;
-    background: white;
+    background: rgb(38, 38, 38);
+    color: white;
     cursor: pointer;
     width: 200px;
     margin-top: 20px;
     font-size: 18px;
     font-weight: 500;
+}
+.contactFormTitleText {
+    white-space: nowrap;
+    display: inline-block;
+    overflow: hidden;
+    width: 320px;
+    border-right: 1px solid black;
+    opacity: 0%;
+}
+.contactFormTitleTypingAnim {
+    animation: typingAnimation 2s 1s forwards, 
+               typingAnimationCursor .75s step-end infinite alternate;
+}
+@keyframes typingAnimation {
+    0% { 
+        width: 0%; 
+        opacity: 0%;
+    }
+    1% {
+        width: 0;
+        opacity: 100%;
+    }
+    100% {
+        width: 320px;
+        opacity: 100%;
+    }
+}
+@keyframes typingAnimationCursor {
+    50% { border-color: transparent; }
 }

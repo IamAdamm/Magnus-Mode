@@ -2,15 +2,27 @@ import React from 'react'
 import '../styles/Bestsellers.css'
 import dragon from '../assets/dragon_1.jpg'
 import dragon1 from '../assets/dragon_2.jpg'
+import useIntersectionObserver from '../helpers/IntersectionObserver'
+
+function loadToCategories() {
+  window.location.href = '/categories';
+}
 
 function Bestsellers() {
+
+  useIntersectionObserver('.bestsellersTitle', 'bestsellersTitlePhaseInFromRight');
+  useIntersectionObserver('.bestsellersTitleh5', 'bestsellersTitlePhaseInFromRighth5');
+
   return (
     <div className='bestsellers'>
-      <div className='title'>
-        <h1>Our Bestsellers</h1>
+      <div className='bestsellersTitleContainer'>
+        <div className='bestsellersTitle'>
+          <h5 className='bestsellersTitleh5'>OUR BESTSELLERS</h5>
+          <h1>Designed with Passion</h1>
+        </div>
       </div>
       <div className='imageSlider'>
-          <div className='slider' style={{ '--quantity': 10 }}>
+          <div className='slider' style={{ '--quantity': 10 }}  onClick={() => loadToCategories()}>
               <div className='item' style={{ '--position': 1 }}><img src={dragon} alt="dragon 1" /></div>
               <div className='item' style={{ '--position': 2 }}><img src={dragon1} alt="dragon 2" /></div>
               <div className='item' style={{ '--position': 3 }}><img src={dragon1} alt="dragon 3" /></div>

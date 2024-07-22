@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import '../styles/Contact.css'
 import Swal from 'sweetalert2'
 
+
+
 function Contact() {
+
+    useEffect(() => {
+        if (document.getElementById('contactFormTitleText')) {
+          document.getElementById('contactFormTitleText').classList.add('contactFormTitleTypingAnim');
+        }
+      }, []);
 
     const onSubmit = async (event) => {
         event.preventDefault();
@@ -35,10 +43,10 @@ function Contact() {
         <div className='contactForm'>
             <form>
                 <div className='contactFormTitle'>
-                    <h1>Contact Form</h1>
+                    <h1 id='contactFormTitleText' className='contactFormTitleText'>Leave us a message!</h1>
                 </div>
                 <div className='contactFormInput'>
-                    <label>Full Name:</label>
+                    <label className='contactFormInputFullName'>Full Name:</label>
                     <input type='text' className='field' placeholder='Enter your full name' required/>
                 </div>
                 <div className='contactFormInput'>

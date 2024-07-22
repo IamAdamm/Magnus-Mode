@@ -7,9 +7,8 @@ const useIntersectionObserver = (selector, className, options = { threshold: 0.2
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
+          console.log('detected')
           entry.target.classList.add(className);
-        } else {
-          entry.target.classList.remove(className);
         }
       });
     }, options);

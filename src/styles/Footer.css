@@ -1,7 +1,8 @@
 .footer {
     display: flex;
-    background-color: rgb(38, 38, 38);
-    color: white;
+    background-color: rgb(237, 237, 237);
+    color: black;
+    box-shadow: 0 -9px 9px rgba(255, 255, 255, 0.2);
     min-width: 100vw;
     height: 200px;
     flex-direction: column;
@@ -14,7 +15,7 @@
     margin-top: 30px;
 }
 .footer .footerSocials a{
-    color: white;
+    color: black;
     margin: 0px 15px;
     display: inline-block;
     transition: transform 0.3s ease;

@@ -11,9 +11,7 @@ const scrollToSection = (id) => {
   window.scrollTo({ top: y, behavior: 'smooth' });
 }
 
-let shoppingCartList= []
-
-function Navbar({ toggleShoppingCartTab, cartCount}) {
+function Navbar() {
   const location = useLocation();
 
   const handleLinkClick = (id, path) => {
@@ -32,10 +30,12 @@ function Navbar({ toggleShoppingCartTab, cartCount}) {
       <div className='rightSide'>
         <a onClick={() => handleLinkClick('home', '/')}>Home</a>
         <Link to="/categories" className='link'>Categories</Link>
-        <a onClick={() => handleLinkClick('about', '/')}>About</a>
-        <a onClick={() => handleLinkClick('contact', '/contact')}>Contact</a>
-        <ShoppingCartIcon className='cartIcon' onClick={toggleShoppingCartTab} />
-        <span>{shoppingCartList.length}</span>
+        <Link to="/about" className='link'>About</Link>
+        <Link to="/contact" className='link'>Contact</Link>
+        <span onClick={() => handleLinkClick('cart', '/cart')}>
+          <ShoppingCartIcon className='cartIcon' />
+          <span className='shoppingCartNumber'>0</span>
+        </span>
       </div>
     </div>
   );
