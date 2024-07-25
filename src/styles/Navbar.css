@@ -74,7 +74,7 @@
     position: relative;
 }
 .navbar .shoppingCartNumber {
-    background-color: red;
+    background-color: rgb(178, 48, 178);
     padding: 5px;
     border-radius: 50%;
     width: 15px;

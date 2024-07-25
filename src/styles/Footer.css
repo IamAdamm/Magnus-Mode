@@ -20,6 +20,16 @@
     display: inline-block;
     transition: transform 0.3s ease;
 }
+.link {
+    text-decoration: none;
+    color: black;
+}
+.legalLink {
+    text-decoration: none;
+    color: grey;
+    margin: 5px 13px 0 13px;
+    display: inline-block;
+}
 .footer .footerSocials a:hover{
     transform: scale(1.3);
 }
@@ -27,4 +37,7 @@
     font-size: 16px;
     cursor: pointer;
     margin: 0px 30px;
+}
+.copyright {
+    margin-top: -15px;
 }

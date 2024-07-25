@@ -1,14 +1,14 @@
 import React from 'react';
-import '../styles/Categories.css';
+import '../styles/Shop.css';
 import Products from '../helpers/Products';
 import dragon from '../assets/dragon_1.jpg';
 import tshirt from '../assets/Tshirt.png';
 
 
-function Categories() {
+function Shop() {
 
   return (
-    <div className='categories'>
+    <div className='shop'>
         <div className='productCardRow'>
             <div className='productCard'>
                 <img id='shirt' src={tshirt}/>
@@ -89,4 +89,4 @@ function Categories() {
   )
 }
 
-export default Categories
+export default Shop

@@ -1,55 +1,111 @@
 .categories {
+    width: 100%;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
-    width: 1300px;
-    height: auto;
-    margin-top: 200px;
-    justify-content: space-between;
-    color: black;
-}
-.categories .productCard{
-    display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
-    height: 450px;
-    width: 280px;
-    background-color: rgb(237, 237, 237);
-    border-radius: 20px;
-    filter: drop-shadow(0 1px 5px white);
 }
-.categories .productCardRow {
+.categoriesTitle {
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    margin-bottom: -50px;
+    opacity: 0;
+}
+.categoriesTitle h5 {
+    filter: drop-shadow(0 0px 3px white);
+    opacity: 0;
+}
+.categoriesTitle h2 {
+    margin-top: -20px;
+    font-size: 30px;
+    margin-bottom: 100px;
+}
+.categoriesProducts {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    width: 1250px;
-    margin-left : auto;
-    margin-right: auto;
-    gap: 40px;
-    margin-bottom: 50px;
+    width: calc(44vw + 13.5px);
+    height: calc(71vh + 7px);
+    gap: 5px;
+    opacity: 0%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 35px;
 }
-.categories .productCard img{
-    height: 300px;
-    width: 200px;
-    filter: drop-shadow(0 0px 8px black);
-}
-#shirt {
-    height: auto;
-}
-.categories .productCard .productCardName{
-    font-weight: 500;
-}
-.categories .productCard .productCardPrice{
-    margin-top: 0px;
-}
-.categories .productCard .productCardBtn {
-    color: white;
-    background-color: rgb(38, 38, 38);
-    border: none;
+.categoriesProducts img {
+    transition: all .3s;
+    width: calc(22.5vw - 3px);
+    height: calc(36vh - 3px);
     border-radius: 20px;
-    height: 35px;
-    width: 100px;
-    margin-top: -15px;
-    font-weight: bold;
-    cursor: pointer;
+    box-shadow: 0 0 10px white ;
+    background-color: rgb(38, 38, 38);
+}
+.categoriesProducts img:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+.categoriesProducts:hover {
+    background-color: rgb(38, 38, 38);
+    width: calc(44vw + 18.4px);
+    height: calc(71vh + 7px);
+    margin-left: 4.9px;
 }
 
+.tshirtImg:hover{
+    background-color: red;
+    box-shadow: 0 0 20px red;
+    border-right: 5px solid white;
+    border-bottom: 5px solid white;
+}
+.hoodieImg:hover {
+    background-color: blue;
+    box-shadow: 0 0 20px blue;
+    border-left: 5px solid white;
+    border-bottom: 5px solid white;
+}
+.shoesImg:hover {
+    background-color: purple;
+    box-shadow: 0 0 20px purple;
+    border-right: 5px solid white;
+    border-top: 5px solid white;
+}
+.accessoriesImg:hover {
+    background-color: yellow;
+    box-shadow: 0 0 20px yellow;
+    border-left: 5px solid white;
+    border-top: 5px solid white;
+}
+.categoriesProducts:hover img:not(:hover) {
+    box-shadow: none;
+}
+.categoriesTitlePhaseInFromRight {
+    opacity: 100% !important;
+    animation: CategoriesTitlePhaseInFromRight .5s;
+    transition: all .5s;
+}
+.categoriesTitlePhaseInFromRighth5 {
+    opacity: 100% !important;
+    animation: CategoriesTitlePhaseInFromRight 1.3s;
+    transition: all .5s;
+}
+.categoriesProductsScaleOnSight {
+    opacity: 100% !important;
+    animation: CategoriesProductsScaleOnSight .5s;
+    transition: opacity .5s, animation .5s;
+}
+@keyframes CategoriesProductsScaleOnSight {
+    0% {
+        scale: 0;
+    }
+    100% {
+        scale: 1;
+    }
+}
+@keyframes CategoriesTitlePhaseInFromRight {
+    0% {
+        transform: translateX(500px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}

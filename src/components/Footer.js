@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/Footer.css'
+import { Link, useLocation } from 'react-router-dom';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import XIcon from '@mui/icons-material/X';
@@ -14,6 +15,17 @@ const scrollToSection = (id) => {
 }
 
 function Footer() {
+
+    const location = useLocation();
+
+    const handleLinkClick = (id, path) => {
+      if (location.pathname === path) {
+        scrollToSection(id);
+      } else {
+        window.location.href = path;
+      }
+    }
+
   return (
     <div className='footer'>
         <div className='footerSocials'>
@@ -46,10 +58,16 @@ function Footer() {
             </a>
         </div>
         <div className='footerLinks'>
-        <a onClick ={() => scrollToSection('home')}>Home</a>
-            <a onClick={() => scrollToSection('categories')}>Categories</a>
-            <a onClick={() => scrollToSection('about')}>About</a>
-            <a onClick={() => scrollToSection('contact')}>Contact</a>
+            <a onClick={() => handleLinkClick('home', '/')}>Home</a>
+            <Link to="/categories" className='link'>Categories</Link>
+            <Link to="/about" className='link'>About</Link>
+            <Link to="/contact" className='link'>Contact</Link>
+            </div>
+        <div className='footerLegality'>
+            <Link to="/terms-of-use" className='legalLink'>Terms of use</Link>
+            <Link to="/privacy-notice" className='legalLink'>Privacy notice</Link>
+            <Link to="/cookies" className='legalLink'>Cookies</Link>
+            <Link to="/impressum" className='legalLink'>Impressum</Link>
         </div>
         <div className='copyright'>
             <h4>Copyright © 2024. All rights are reserved</h4>

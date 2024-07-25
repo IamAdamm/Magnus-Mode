@@ -71,17 +71,15 @@
     height: auto;
     opacity: 0%;
 }
-.bestsellersTitle h1 {
+.bestselllersTitle h1 {
     font-size: 70px;
 }
 .bestsellersTitle h5 {
     font-weight: bolder;
     color: rgb(255, 255, 255);
     filter: drop-shadow(0 0px 3px white);
-    margin-bottom: -50px;
+    margin-bottom: -20px;
     opacity: 0%;
-    margin-left: 5px;
-
 }
 .bestsellersTitlePhaseInFromRight {
     opacity: 100% !important;
