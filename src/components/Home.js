@@ -1,5 +1,6 @@
-import React from 'react'
-import '../styles/Home.css'
+import React from 'react';
+import '../styles/Home.css';
+import Power from '../assets/Power.jpg';
 import { Link } from 'react-router-dom';
 
 
@@ -18,7 +19,7 @@ function Home() {
             </div>
         </div>
         <div className='homeRightSide'>
-            <h1>SfP</h1>
+            <img src={Power}/>
         </div>
     </div>
   )

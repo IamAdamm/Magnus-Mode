@@ -1,0 +1,79 @@
+/* Container for the cookies policy */
+.cookies-container {
+    max-width: 800px; /* Constrain the width of the content */
+    margin: 0 auto; /* Center the content */
+    padding: 40px; /* Padding around the content */
+    border-radius: 10px; /* Rounded corners */
+    font-family: 'Arial', sans-serif; /* Clean, modern font */
+    line-height: 1.6; /* Comfortable line spacing */
+  }
+  
+  /* Styling for the headings */
+  .cookies-container h1 {
+    margin-top: 150px;
+    font-size: 2.4rem; /* Larger size for the main heading */
+    margin-bottom: 20px; /* Space below the main heading */
+    color: white; /* Darker heading color */
+  }
+  
+  .cookies-container h2 {
+    font-size: 1.8rem; /* Medium size for subheadings */
+    margin-top: 30px; /* Space above subheadings */
+    margin-bottom: 15px; /* Space below subheadings */
+    color: white; /* Slightly lighter subheading color */
+  }
+  
+  /* Styling for paragraphs */
+  .cookies-container p {
+    font-size: 1.1rem; /* Standard paragraph font size */
+    margin-bottom: 20px; /* Space below each paragraph */
+    color: white; /* Softer text color */
+  }
+  
+  /* Styling for the unordered list */
+  .cookies-container ul {
+    list-style-type: disc; /* Use discs as list markers */
+    margin-left: 20px; /* Indent the list */
+    color: white; /* Softer text color */
+  }
+  
+  /* Styling for list items */
+  .cookies-container li {
+    margin-bottom: 10px; /* Space below each list item */
+    font-size: 1.1rem; /* Same size as paragraphs */
+  }
+  
+  /* Styling for strong text */
+  .cookies-container li strong {
+    color: white; /* Darker color for emphasized text */
+  }
+  
+  /* Styling for links */
+  .cookies-container a {
+    color: #007BFF; /* Blue color for links */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  .cookies-container a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  /* Responsive Design: Adjust layout for smaller screens */
+  @media screen and (max-width: 768px) {
+    .cookies-container {
+      padding: 20px; /* Reduce padding on smaller screens */
+    }
+  
+    .cookies-container h1 {
+      font-size: 2rem; /* Slightly smaller main heading */
+    }
+  
+    .cookies-container h2 {
+      font-size: 1.6rem; /* Slightly smaller subheadings */
+    }
+  
+    .cookies-container p, .cookies-container li {
+      font-size: 1rem; /* Reduce font size slightly */
+    }
+  }
+  

@@ -1,44 +1,28 @@
 import React from 'react';
 import '../styles/About.css';
-import Test from '../assets/test.png';
-import Test1 from '../assets/test2.png';
-import 'react-slideshow-image/dist/styles.css'
-import { Slide } from 'react-slideshow-image'
+import Creation from '../assets/Creation.jpg';
 
-function About() {
-  return (
-    <div className='about' id='about'>
-        <h1>About The Brand</h1>
-        <div className='aboutContainer'>
-            <div className='aboutImage'>
-                <Slide>
-                    <img src={Test}/>
-                    <img src={Test1}/>
-                </Slide>
-            </div>
-            <div className='aboutText'>
-                <h3>A dedicated Brand Brand Brand Brand Brand Brand Brand Brand</h3>
-                <p>
-                    As a Junior Front-End Developer, 
-                    I bring an impressive skill set 
-                    in HTML, CSS, JavaScript, React, 
-                    and Shopify. <br/><br/> I specialize in 
-                    designing, building, and maintaining 
-                    responsive websites that provide 
-                    seamless user experiences. My 
-                    proficiency includes crafting 
-                    dynamic, engaging interfaces 
-                    through clean, optimized code 
-                    and the use of the latest development 
-                    tools and techniques. <br/><br/> I excel in 
-                    collaborative environments, working 
-                    with cross-functional teams to create 
-                    outstanding web applications.
-                </p>
-            </div>
+const About = () => {
+    return (
+      <div className="about-container">
+        <div className="about-text">
+          <h1>About the Artist</h1>
+          <p>
+            Welcome to Strife for Peace, the online gallery of Milano, a passionate painter dedicated to capturing the beauty of the world through vibrant colors and expressive brushstrokes.
+          </p>
+          <p>
+            With over 8 years of experience, Milano has developed a unique style that blends realism with abstract elements, creating artworks that are both thought-provoking and visually stunning. Each painting is a reflection of Milanos's deep love for art and the inspiration drawn from nature, people, and the future.
+          </p>
+          <p>
+            Whether you're looking for a piece to complete your home decor or a unique gift, you'll find something special in our collection. All paintings are created with high-quality materials and come with a certificate of authenticity.
+          </p>
         </div>
-    </div>
-  )
-}
+        <div className="about-image">
+          <img src={Creation} alt="Featured Painting" />
+          <figcaption>"Creation" - A featured work by Milano</figcaption>
+        </div>
+      </div>
+    );
+  };
 
 export default About

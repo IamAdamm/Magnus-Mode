@@ -1,8 +1,8 @@
 .footer {
     display: flex;
-    background-color: rgb(237, 237, 237);
+    background-color: white;
     color: black;
-    box-shadow: 0 -9px 9px rgba(255, 255, 255, 0.2);
+    /*box-shadow: 0 -9px 9px rgba(255, 255, 255, 0.2);*/
     min-width: 100vw;
     height: 200px;
     flex-direction: column;

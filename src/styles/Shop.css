@@ -14,23 +14,33 @@
     align-items: center;
     height: 450px;
     width: 280px;
+    margin-bottom: 40px;
     background-color: rgb(237, 237, 237);
     border-radius: 20px;
-    filter: drop-shadow(0 1px 5px white);
+    filter: drop-shadow(0 1px 2px white);
+}
+.productCardProduct {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 380px;
 }
 .shop .productCardRow {
     display: flex;
     flex-direction: row;
-    width: 1250px;
+    flex-wrap: wrap;
+    width: 1240px;
     margin-left : auto;
     margin-right: auto;
     gap: 40px;
     margin-bottom: 50px;
 }
 .shop .productCard img{
-    height: 300px;
-    width: 200px;
-    filter: drop-shadow(0 0px 8px black);
+    width: 225px;
+    max-height: 250px;
+    object-fit: contain;
+    filter: drop-shadow(0 0px 3px black);
 }
 #shirt {
     height: auto;
@@ -51,5 +61,10 @@
     margin-top: -15px;
     font-weight: bold;
     cursor: pointer;
+}
+.productCardBtnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 

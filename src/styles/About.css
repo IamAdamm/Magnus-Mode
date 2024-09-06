@@ -1,52 +1,72 @@
-.about {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100dvh;
-    color: white;
-    background-color: rgb(38, 38, 38);
-}
-.about p {
-    color: rgb(228, 228, 228);
-}
-.aboutContainer {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    flex-direction: row-reverse;
-    align-items: center;
-    width: 820px;
-}
-.about h1 {
-    margin-bottom: 45px;
-}
-.about h3 {
-    font-weight: bolder;
-    margin-top: -15px;
-}
-.about p {
-    font-size: 16px;
-    margin-top: -5px;
-}
-.aboutImage {
-    margin-top: 10px;
-    width: 400px;
-    display: 'flex';
-    align-items: center; 
-    justify-Content: center; 
-    height: 400px;
-    background-size:'cover';
-
-}
-.aboutImage img{
-    border-radius: 30px;
-    filter: drop-shadow(0 0px 3px white);
-}
-
-.aboutText {
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-}
+/* Container for the about section */
+.about-container {
+    margin-top: 150px;
+    display: flex; /* Align items side by side */
+    flex-direction: row; /* Default direction is row */
+    justify-content: space-between; /* Space between text and image */
+    align-items: center; /* Center vertically */
+    padding: 40px; /* Padding inside the container */
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  /* Styling for the text section */
+  .about-text {
+    flex: 1; /* Take up one part of the container */
+    margin-right: 40px; /* Space between text and image */
+    color: white; /* Darker text color */
+  }
+  
+  .about-text h1 {
+    font-size: 4.8rem; /* Larger font for the heading */
+    margin-bottom: 25px; /* Space below the heading */
+    color: white; /* Slightly darker heading color */
+    font-family: 'Georgia', serif; /* Elegant font */
+    text-decoration: underline;
+  }
+  
+  .about-text p {
+    font-size: 1.8rem; /* Standard paragraph font size */
+    line-height: 1.7; /* Increase line spacing */
+    margin-bottom: 15px; /* Space between paragraphs */
+    color: #e3e3e3; /* Softer text color */
+    font-family: 'Arial', sans-serif; /* Clean, modern font */
+  }
+  
+  /* Styling for the image section */
+  .about-image {
+    flex: 1; /* Take up the remaining part of the container */
+    text-align: center; /* Center the image */
+  }
+  
+  .about-image img {
+    max-width: 100%; /* Ensure image fits within its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+  }
+  
+  .about-image figcaption {
+    margin-top: 15px; /* Space above the caption */
+    font-style: italic; /* Italicize the caption */
+    color: #777; /* Softer caption color */
+    font-size: 1rem; /* Smaller font for caption */
+  }
+  
+  /* Responsive Design: Adjust layout for smaller screens */
+  @media screen and (max-width: 768px) {
+    .about-container {
+      flex-direction: column; /* Stack items vertically */
+      text-align: center; /* Center text */
+      padding: 20px; /* Reduce padding */
+    }
+  
+    .about-text {
+      margin-right: 0; /* Remove right margin */
+      margin-bottom: 20px; /* Add space below the text */
+    }
+  
+    .about-image {
+      margin-top: 20px; /* Space above the image */
+    }
+  }
+  

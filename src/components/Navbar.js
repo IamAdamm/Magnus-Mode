@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import '../styles/Navbar.css';
 import Logo from '../assets/logo.png';
 import { Link, useLocation } from 'react-router-dom';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { ShopContext } from '../context/shop-context';
 
 const scrollToSection = (id) => {
   const yOffset = -230;
@@ -12,6 +13,9 @@ const scrollToSection = (id) => {
 }
 
 function Navbar() {
+
+  const {getTotalNumberOfItems, cartItems} = useContext(ShopContext)
+
   const location = useLocation();
 
   const handleLinkClick = (id, path) => {
@@ -34,7 +38,10 @@ function Navbar() {
         <Link to="/contact" className='link'>Contact</Link>
         <span onClick={() => handleLinkClick('cart', '/cart')}>
           <ShoppingCartIcon className='cartIcon' />
-          <span className='shoppingCartNumber'>0</span>
+          {getTotalNumberOfItems() > 0 ?
+          <span className='shoppingCartNumber'>{getTotalNumberOfItems()}</span>
+          : null
+          }
         </span>
       </div>
     </div>

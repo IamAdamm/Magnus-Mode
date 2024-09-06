@@ -31,28 +31,27 @@
 }
 @keyframes autoRun {
     from{
-        transform: perspective(1000px) rotateX(-10deg) rotateY(0deg);
+        transform: perspective(1000px) rotateX(-8deg) rotateY(0deg);
     }
     to {
-        transform: perspective(1000px) rotateX(-10deg) rotateY(360deg);
+        transform: perspective(1000px) rotateX(-8deg) rotateY(360deg);
     }
 }
 .imageSlider .slider .item {
     position: absolute;
     inset: 0 0 0 0;
     transform-style: preserve-3d;
-    width: 200px;
-    height: 250px;
+    width: 210px;
+    height: 257px;
     border: 1px solid white;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 11px;
     transform: rotateY(calc((var(--position) - 1) * (360deg / var(--quantity)))) translateZ(400px);
 }
 .imageSlider .slider .item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: drop-shadow(0 0px 5px white);
     border-radius: 10px;
     transition: all .3s;
 }
@@ -70,16 +69,16 @@
     align-items: flex-start;
     height: auto;
     opacity: 0%;
-}
-.bestselllersTitle h1 {
-    font-size: 70px;
+    font-size: 30px;
 }
 .bestsellersTitle h5 {
     font-weight: bolder;
     color: rgb(255, 255, 255);
     filter: drop-shadow(0 0px 3px white);
-    margin-bottom: -20px;
+    margin-bottom: -45px;
+    margin-left: 5px;
     opacity: 0%;
+    font-size: 20px;
 }
 .bestsellersTitlePhaseInFromRight {
     opacity: 100% !important;
@@ -98,4 +97,34 @@
     100% {
         transform: translateX(0px);
     }
+}
+#manikoGirlSmall {
+    filter: drop-shadow(0 0px 5px green);
+}
+#manikoSmall {
+    filter: drop-shadow(0 0px 5px rgb(224, 84, 191));
+}
+#leafWomanSmall {
+    filter: drop-shadow(0 0px 5px rgb(0, 0, 169));
+}
+#robotGirlSmall {
+    filter: drop-shadow(0 0px 5px rgb(0, 234, 255));
+}
+#angelSmall {
+    filter: drop-shadow(0 0px 5px red);
+}
+#galaxySmall {
+    filter: drop-shadow(0 0px 5px rgb(255, 230, 0));
+}
+#flowerWomanSmall {
+    filter: drop-shadow(0 0px 5px rgb(246, 172, 184));
+}
+#swordWomanSmall {
+    filter: drop-shadow(0 0px 5px rgb(5, 205, 255));
+}
+#SkullSmall {
+    filter: drop-shadow(0 0px 5px rgb(255, 251, 18));
+}
+#goldRoseSmall {
+    filter: drop-shadow(0 0px 5px rgb(255, 148, 166));
 }
