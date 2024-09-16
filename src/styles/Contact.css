@@ -1,5 +1,4 @@
 .contact {
-    margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,13 +9,12 @@
 .contact .contactForm {
     display: flex;
     flex-direction: column;
-    background-color: rgb(237, 237, 237);
+    background-color: white;
     text-align: center;
     color: black;
     border-radius: 10%;
     height: 550px;
     width: 550px;
-    box-shadow: 0 0px 20px rgb(237, 237, 237, 0.2);
     font-weight: 700;
 }
 .contact .contactForm .contactFormTitle {
@@ -55,7 +53,7 @@
     height: 50px;
     border-radius: 10px;
     border: none;
-    background: rgb(38, 38, 38);
+    background: black;
     color: white;
     cursor: pointer;
     width: 200px;

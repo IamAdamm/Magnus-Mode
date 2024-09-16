@@ -1,0 +1,69 @@
+.carousel {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageSlider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.imageSlider .slider {
+    display: flex;
+    transition: transform 0.8s ease-in-out; /* Smooth transition for the slider */
+}
+
+.imageSlider .slider .item {
+    width: 200px; /* Narrower width for pill-like shape */
+    height: 500px; /* Taller height */
+    border-radius: 100px; /* Rounded edges for pill-like shape */
+    transition: transform 0.8s ease-in-out; /* Smooth transition for individual images */
+    
+    /* Apply the transform logic in CSS */
+    transform: translateX(calc((var(--position) - var(--current-index)) * 40%));
+}
+
+
+.imageSlider .slider .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100px; /* Rounded edges for pill-like shape */
+    transition: transform 0.3s;
+}
+
+.imageSlider .slider .item img:hover {
+    transform: scale(1.1);
+}
+
+/* Arrow Styles */
+.carousel .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    background: rgba(0, 0, 0); /* Simple dark background */
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 1;
+}
+.carousel .arrowLeft {
+    left: 0; /* Positioned over the leftmost image */
+}
+
+.carousel .arrowRight {
+    right: 0; /* Positioned over the rightmost image */
+}

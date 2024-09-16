@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/About.css';
-import Creation from '../assets/Creation.jpg';
+import Tshirt from '../assets/Tshirt.png';
 
 const About = () => {
     return (
@@ -18,7 +18,7 @@ const About = () => {
           </p>
         </div>
         <div className="about-image">
-          <img src={Creation} alt="Featured Painting" />
+          <img src={Tshirt} alt="Featured Painting" />
           <figcaption>"Creation" - A featured work by Milano</figcaption>
         </div>
       </div>

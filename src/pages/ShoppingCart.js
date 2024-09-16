@@ -3,15 +3,45 @@ import '../styles/ShoppingCart.css'
 import { Products } from '../helpers/Products';
 import { ShopContext } from '../context/shop-context';
 import { CartItem } from '../helpers/Cart-item';
+import { loadStripe } from '@stripe/stripe-js';
 
 const linkToShop = () => {
-  window.location.href = '/categories';
+  window.location.href = '/shop';
 }
 
 function ShoppingCart() {
 
   const {cartItems,getTotalCartAmount} = useContext(ShopContext);
   const totalAmount = getTotalCartAmount();
+
+  const makePayment = () => {
+    console.log('clicked')
+
+    fetch("http://localhost:3001/create-checkout-session", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        items: [
+          { id: 1, quantity: 3 },
+          { id: 2, quantity: 1 },
+        ],
+      }),
+    })
+    .then(res => {
+      if(res.ok) return res.json()
+        return res.json().then(json => Promise.reject(json))
+    })
+    .then(({ url }) => {
+      console.log('redirection works?');
+      window.location = url;
+    })
+    .catch(e => console.error(e.error));
+    console.log('clicked')
+
+  }
+  
 
   return (
     <div className='shoppingCart' id='cart'>
@@ -34,7 +64,7 @@ function ShoppingCart() {
           <h4>Subtotal: {totalAmount}$</h4>
           <div className='checkoutBtns'>
             <button onClick={linkToShop}>Continue Shopping</button>
-            <button>Checkout</button>
+            <button onClick={makePayment}>Checkout</button>
           </div>
         </div>
 

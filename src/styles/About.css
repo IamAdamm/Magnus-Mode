@@ -1,8 +1,7 @@
 /* Container for the about section */
 .about-container {
-    margin-top: 150px;
-    display: flex; /* Align items side by side */
-    flex-direction: row; /* Default direction is row */
+    display: flex; 
+    flex-direction: row; 
     justify-content: space-between; /* Space between text and image */
     align-items: center; /* Center vertically */
     padding: 40px; /* Padding inside the container */

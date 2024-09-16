@@ -1,0 +1,95 @@
+.productShowcase {
+    height: 90vh;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid rgb(172, 20, 172);
+    border-top: none;
+    border-right: none;
+    background-color: white;
+    color: black;
+    position: relative;
+}
+.productShowcaseLeftSide {
+    height: 90%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+.productShowcaseLeftSide h1 {
+    font-size: 4rem;
+}
+.productShowcaseLeftSideDesc {
+    font-size: 1.3rem;
+    font-weight: 300;
+    width: 90%;
+    margin-top: -5%;
+}
+.productShowcaseLeftSideColors  {
+    color: grey;
+    display: flex;
+    align-items: center;
+    margin-top: 10%;
+    font-size: 1rem;
+}
+.productShowcaseLeftSideColors button {
+    border: none;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    margin: 0 4px; 
+}
+.green  {
+    background-color: green;
+}
+.red {
+    background-color: red;
+}
+.yellow {
+    background-color: blue;
+}
+.productShowcaseBtn {
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 50px;
+    height: 50px;
+    width: 150px;
+    font-size: .9rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10%;
+}
+
+/* RIGHT SIDE */
+
+.productShowcaseRightSide {
+    width: 65%;
+    height: 80%;
+    position: relative;
+}
+.productShowcaseRightSide img{
+    height: 100%;
+    object-fit:cover;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    max-width: fit-content;
+}
+.productShowcaseRightSideBackground {
+    width: 50vw;
+    height: 60vh;
+    bottom: 15%;
+    right: 6%;
+    z-index: 0;
+    position: absolute;
+    background-color: rgb(255, 228, 179);
+}
+.productShowcaseRightSideBackground h2{
+    font-size: 1.7rem;
+    position: absolute;
+    right: 5%;
+    font-weight: 100;
+}
+

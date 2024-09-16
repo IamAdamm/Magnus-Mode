@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { ShopContext } from '../context/shop-context';
+import image from '../assets/Tshirt.png'
 
 export const Product = (props) => {
     const {id, type, image, name, description, price} = props.data;

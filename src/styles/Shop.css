@@ -3,7 +3,7 @@
     flex-direction: column;
     width: 1300px;
     height: auto;
-    margin-top: 200px;
+    margin-top: 50px;
     justify-content: space-between;
     color: black;
 }
@@ -15,7 +15,7 @@
     height: 450px;
     width: 280px;
     margin-bottom: 40px;
-    background-color: rgb(237, 237, 237);
+    background-color: white;
     border-radius: 20px;
     filter: drop-shadow(0 1px 2px white);
 }
@@ -53,7 +53,7 @@
 }
 .shop .productCard .productCardBtn {
     color: white;
-    background-color: rgb(38, 38, 38);
+    background-color: black;
     border: none;
     border-radius: 20px;
     height: 35px;
