@@ -80,7 +80,7 @@ function Navbar() {
       </div>
       <div className='rightSide'>
         <span
-          className='cartIcon'
+          className={`cartIcon ${activeLink === '/cart' ? 'active' : ''}`}
           onClick={() => handleLinkClick('cart', '/cart')}
         >
           <ShoppingCartIcon className='cartIcon' />

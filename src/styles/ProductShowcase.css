@@ -5,20 +5,56 @@
     justify-content: center;
     align-items: center;
     border: 4px solid rgb(172, 20, 172);
+    border-radius: 10px;
     border-top: none;
     border-right: none;
     background-color: white;
     color: black;
     position: relative;
 }
+.productShowcaseArrows {
+    position: absolute;
+    z-index: 2;
+    width: 10%;
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+}
+.productShowcaseArrows img{
+    height: 25px;
+    padding: 10px;
+}
+.productShowcaseArrowLeft {
+    rotate: 180deg;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1);
+    transition: filter .3s;
+}
+.productShowcaseArrowRight {
+    background-color: white;
+    cursor: pointer;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, .1);
+    border-radius: 50%;
+    transition: filter .3s;
+}
+.productShowcaseArrowRight:hover, .productShowcaseArrowLeft:hover {
+    filter: invert(1);
+}
 .productShowcaseLeftSide {
     height: 90%;
     width: 25%;
     display: flex;
     flex-direction: column;
+    font-family: "Poppins", sans-serif;
 }
 .productShowcaseLeftSide h1 {
-    font-size: 4rem;
+    font-size: 3.7rem;
+    font-weight: 600;
+    margin-top: 0;
 }
 .productShowcaseLeftSideDesc {
     font-size: 1.3rem;
@@ -30,7 +66,6 @@
     color: grey;
     display: flex;
     align-items: center;
-    margin-top: 10%;
     font-size: 1rem;
 }
 .productShowcaseLeftSideColors button {
@@ -41,25 +76,27 @@
     margin: 0 4px; 
 }
 .green  {
-    background-color: green;
+    background-color: rgb(128, 92, 0);
 }
 .red {
-    background-color: red;
+    background-color: rgb(113, 103, 103);
 }
 .yellow {
-    background-color: blue;
+    background-color: rgb(103, 14, 158);
 }
 .productShowcaseBtn {
     color: white;
     background-color: black;
     border: none;
     border-radius: 50px;
-    height: 50px;
-    width: 150px;
+    height: 6vh;
+    width: 50%;
     font-size: .9rem;
     font-weight: bold;
     cursor: pointer;
     margin-top: 10%;
+    font-family: "Poppins", sans-serif;
+
 }
 
 /* RIGHT SIDE */
@@ -68,28 +105,59 @@
     width: 65%;
     height: 80%;
     position: relative;
+    font-family:'Segoe UI', sans-serif;
+    margin-top: 7%;
 }
 .productShowcaseRightSide img{
     height: 100%;
+    width: 100%;
     object-fit:cover;
     overflow: hidden;
     position: relative;
     z-index: 1;
-    max-width: fit-content;
 }
 .productShowcaseRightSideBackground {
-    width: 50vw;
+    width: 52vw;
     height: 60vh;
-    bottom: 15%;
-    right: 6%;
+    bottom: 20%;
+    right: 3%;
     z-index: 0;
     position: absolute;
-    background-color: rgb(255, 228, 179);
+    background-color: rgb(249, 229, 192);
 }
 .productShowcaseRightSideBackground h2{
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     position: absolute;
-    right: 5%;
+    right: 2%;
+    top: 0%;
     font-weight: 100;
+    color: white;
+    background-color: black;
+    border-radius: 1000px;
+    padding: 15px;
 }
+.productShowcaseCarouselItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    opacity: 0;
+    transition: opacity .4s ease;
+  }
+  .productShowcaseCarouselItem.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  .productShowcaseCarouselItem.inactive {
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    transform: translateX(100%);
+    pointer-events: none;
+    z-index: -1;
+  }
+  
 

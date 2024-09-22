@@ -33,8 +33,8 @@
     margin: 30px;
     margin-right: 0;
     margin-left: 0;
-    border-radius: 50px;
-    padding: 5px;
+    border-radius: 50000px;
+    padding: 10px;
     width: 12vh;
     text-align: center;
     cursor: pointer;
@@ -45,29 +45,42 @@
 .link.active {
     background-color: white; 
     color: black !important;
-  }
+}
+.cartIcon.active {
+    background-color: white; 
+    color: black !important;
+    border-radius: 10000px;
+}
 .navbar .rightSide {
     margin-right: 5%;
     height: 10vh;
+    width: 5vw;
     align-content: center;
 }
 .navbar .cartIcon {
     margin-top: 10%;
-    font-size: 3rem;
+    width: 2.4rem;
+    height: 2.4rem;
     cursor: pointer;
     position: relative;
+    padding: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .navbar .shoppingCartNumber {
     background-color: red;
     color: white;
     padding: 5px;
-    font-size: 17px;
     border-radius: 50%;
     width: 15px;
     height: 15px;
     text-align: center;
     position: absolute;
     cursor: pointer;
+    display: block;
+    right: 0%;
+    top: 0%;
 }
 .navbarSelectLink {
     background-color: white;

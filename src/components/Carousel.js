@@ -1,55 +1,39 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Carousel.css';
 import s from '../assets/s.jpeg';
-
+import a from '../assets/a.webp';
+import b from '../assets/b.jpeg';
 
 
 function Carousel() {
-  const [currentIndex, setCurrentIndex] = useState(2); // Start with the second image in the center
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % 8); // Loop around 3 items
-  };
+    const navigate = useNavigate();
 
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + 3) % 8); // Loop around 3 items
-  };
-
+    const goToShop = () => {
+        navigate('/shop');
+    };
   return (
     <div className='carousel'>
-      <button className='arrowLeft' onClick={handlePrev}>{"<"}</button>
       <div className='imageSlider'>
-        <div className='slider' style={{ '--quantity': 8, '--current-index': currentIndex }}>
-          <div className='item' style={{ '--position': 1 }}>
-            <img src={s} layout="fill" objectFit="contain" alt="Image 1" />
+          <div className='slider' style={{ '--quantity': 10 }}>
+              <div className='item' style={{ '--position': 1 }} onClick= {goToShop}>
+                <img src={s} alt=" 1" />
+                <div className='carouselPriceTag'>
+                  Price
+                </div>
+              </div>
+              <div className='item' style={{ '--position': 2 }} onClick= {goToShop}><img src={b} alt=" 4" /></div>
+              <div className='item' style={{ '--position': 3 }} onClick= {goToShop}>
+                <img src={a} alt=" 2" />
+                <div className='carouselPriceTag'>
+                  <h3>Price</h3>
+                </div>
+              </div>
+              <div className='item' style={{ '--position': 4 }} onClick= {goToShop}><img src={b} alt=" 8" /></div>
+              <div className='item' style={{ '--position': 5 }} onClick= {goToShop}><img src={s} alt=" 3" /></div>
           </div>
-          <div className='item' style={{ '--position': 2 }}>
-            <img src={s} alt="Image 2" layout="fill" objectFit="contain"/>
-          </div>
-          <div className='item' style={{ '--position': 3 }}>
-            <img src={s} alt="Image 3" layout="fill" objectFit="contain"/>
-          </div>
-          <div className='item' style={{ '--position': 3 }}>
-            <img src={s} alt="img 3" layout="fill" objectFit="contain"/>
-          </div>
-          <div className='item' style={{ '--position': 4 }}>
-            <img src={s} alt="img 3" layout="fill" objectFit="contain"/>
-          </div>
-          <div className='item' style={{ '--position': 5 }}>
-            <img src={s} alt="img 3" layout="fill" objectFit="contain"/>
-          </div>
-          <div className='item' style={{ '--position': 6 }}>
-            <img src={s} alt="img 3" layout="fill" objectFit="contain"/>
-          </div>
-          <div className='item' style={{ '--position': 7 }}>
-            <img src={s} alt="img 3" layout="fill" objectFit="contain"/>
-          </div>
-          <div className='item' style={{ '--position': 8 }}>
-            <img src={s} alt="img 3" layout="fill" objectFit="contain"/>
-          </div>
-        </div>
       </div>
-      <button className='arrowRight' onClick={handleNext}>{">"}</button>
     </div>
   );
 }
